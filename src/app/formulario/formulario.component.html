@@ -1,0 +1,14 @@
+<form class="text-center mt-4" (ngSubmit)="onSubmit()" target="_blank">
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required (ngModelChange)="validarFormulario()" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required (ngModelChange)="validarFormulario()" class="form-control">
+  </div>
+
+  <button type="submit" [disabled]="!formularioValido" (click)="confirmarEnvio()" class="btn btn-primary">Enviar</button>
+</form>
+
